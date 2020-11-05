@@ -6,6 +6,7 @@ import $ from "jquery";
 import sensors from "./sample-sensors";
 import launchPlot from "./fourier";
 import AromaTable from "./aroma-table.js";
+import bluetooth from './bluetooth';
 
 class Grid {
     constructor(items) {
@@ -77,6 +78,15 @@ class Grid {
                 recordContainer.style.overflow = "hidden";
             }
         }
+
+        let bluetoothBtn = modal.querySelector("#bluetooth-connect-btn");
+        bluetoothBtn.onclick = () => {
+            bluetooth.messageReceived = function (event) {
+                console.log("Sensor Info: ", event.target.value);
+            }
+            bluetooth.connect();
+        }
+
     }
 
     loadPlot(modal, sensor, biosensor) {
