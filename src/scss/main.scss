@@ -67,6 +67,25 @@ body {
     margin: 0 auto;
 }
 
+
+#newAromaModal {
+    #aroma-img-upload-btn {
+        width: 100%;
+        padding: 20px 10px;
+    }
+    .image-preview {
+        width: 100%;
+        height: 150px;
+        background-color: #f8f9fa;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 10px 0px;
+        border-radius: 2px;
+    }
+}
+
+
 #fourier {
     font: 13px/13px "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: auto;

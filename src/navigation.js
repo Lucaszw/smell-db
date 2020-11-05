@@ -1,6 +1,7 @@
 import * as _ from 'lodash';
 import { el, mount } from "redom";
 import navigationDiv from './navigation.html';
+import NewAroma from "./new-aroma";
 
 class Navigation {
     constructor() {
@@ -11,6 +12,8 @@ class Navigation {
 
         let sensorOptions = this.container.querySelectorAll(".dropdown-item");
         let dropdown = this.container.querySelector("#sensorDropdown");
+        let newAromaBtn = this.container.querySelector("#add-aroma-btn");
+
         let _this = this;
 
         for (let option of sensorOptions) {
@@ -31,6 +34,11 @@ class Navigation {
                 console.log(_this);
                 _this.onSelectType();
             }
+        }
+
+        newAromaBtn.onclick = () => {
+            let aroma = new NewAroma(this.container);
+            aroma.show();
         }
     }
 }
