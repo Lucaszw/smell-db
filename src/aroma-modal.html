@@ -13,6 +13,23 @@
           </button>
         </div>
         <div class="modal-body">
+            <div id="new-recording">
+              <button type="button" id="bluetooth-connect-btn" class="btn btn-warning"></button>
+              <span class="dropdown">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="sensorDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sensor Type
+                </button>
+                <div class="dropdown-menu dropdown-menu-sm" aria-labelledby="sensorDropdown">
+                  <a class="dropdown-item dropdown-item-sm" value="environment" href="#">QCM</a>
+                  <a class="dropdown-item dropdown-item-sm" value="food" href="#">SPR</a>
+                  <a class="dropdown-item dropdown-item-sm" value="health" href="#">Gas</a>
+                  <a class="dropdown-item dropdown-item-sm" value="health" href="#">Other</a>
+                </div>
+              </span>
+              <button type="button" id="start-record-btn" class="btn btn-light" disabled>
+                <i class="fa fa-circle" aria-hidden="true"></i>
+              </button>
+            </div>
             <b> Select device type and sensor: </b>
             <div class="sensor-types">
             </div>

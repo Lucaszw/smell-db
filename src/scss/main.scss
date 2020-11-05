@@ -49,6 +49,7 @@ body {
     }
     .modal-body {
         overflow: auto;
+        min-height: 200px;
     }
     .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
         padding: 5px;
@@ -60,6 +61,42 @@ body {
     #record-sample-btn {
         margin: 0px 8px;
         position: relative;
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+    #new-recording {
+        margin-bottom: 10px;
+        transition: height .5s;
+        height: 0;
+        overflow: hidden;
+        border-bottom: 1px solid #dee2e6;
+    }
+    #bluetooth-connect-btn {
+        background-image: url(../images/bluetooth.png);
+        height: 30px;
+        width: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top: 5px solid #ffc107;
+        border-bottom: 5px solid #ffc107;
+
+        &:hover {
+            border-top: 5px solid #e0a800;
+            border-bottom: 5px solid #e0a800;
+        }
+    }
+    #start-record-btn {
+        color: #d9d9d9;
+    }
+    .dropdown-menu-sm {
+        padding: 0.5rem 0;
+        margin: 0.271rem 0 0;
+        min-width: 7rem;
+        .dropdown-item {
+            font-size: 14px;
+        }
     }
 }
 

@@ -62,6 +62,21 @@ class Grid {
                 }
             }
         }
+
+        // Create recording:
+        let recordBtn = modal.querySelector("#record-sample-btn");
+        let recordContainer = modal.querySelector("#new-recording");
+        recordBtn.onclick = () => {
+            let {height} = recordContainer.getBoundingClientRect();
+            console.log("Clicked!", {height});
+            if (height <= 1) {
+                recordContainer.style.height = "50px";
+                setTimeout( () => recordContainer.style.overflow = "visible", 500);
+            } else {
+                recordContainer.style.height = "0px";
+                recordContainer.style.overflow = "hidden";
+            }
+        }
     }
 
     loadPlot(modal, sensor, biosensor) {
