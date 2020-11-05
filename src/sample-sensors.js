@@ -31,17 +31,6 @@ const SPR = [
     {name: "Plain gold surface"}
 ];
 
-const coupling = [
-    {name: "Covalent coupling"},
-    {name: "Amine-carboxyl or –CHO based"},
-    {name: "Disulfide-based"},
-    {name: "Affinity capture"},
-    {name: "Biotin-avidin based"},
-    {name: "Ni-NTA based"},
-    {name: "Antibody based"},
-    {name: "Protein A-IgG based"}
-];
-
 const gasSensors = [
     {name: "MQ-2"},
     {name: "MQ-3"},
@@ -65,3 +54,16 @@ export default [
     {category: "Gas", sensors: gasSensors},
     {category: "Other", sensors: other}
 ];
+
+const coupling = [
+    {name: "Covalent coupling"},
+    {name: "Amine-carboxyl or –CHO based"},
+    {name: "Disulfide-based"},
+    {name: "Affinity capture"},
+    {name: "Biotin-avidin based"},
+    {name: "Ni-NTA based"},
+    {name: "Antibody based"},
+    {name: "Protein A-IgG based"}
+];
+
+export {coupling};

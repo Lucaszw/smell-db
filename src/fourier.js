@@ -53,22 +53,22 @@ function launchPlot(parent) {
     //       W = 960,
     // H = 500,
     const {width: W} = parent.getBoundingClientRect();
-    const H = 500;
+    const H = 200;
     const C = types[["square", "sawtooth", "fibonacci", "pulse", "triangle"][randomInt(0,4)]];
     var
       margin = {top: 40, right: 100, bottom: 40, left: 150},
       w = W - margin.left - margin.right,
       h = H - margin.top - margin.bottom,
   
-      radius = 140,
+      radius = 80,
       theta  = 0,
       xmax   = 1.5,
       rate   = 1 / 60,
   
       tDomain = d3.range(0, 1.1, 1 / 1000),   // trace domain
       gDomain = d3.range(0, xmax, xmax / 1000), // graph domain
-      L = randomInt(2,20),            // size
-      F = Math.random(),          // frequence - 3
+      L = randomInt(2,10),            // size
+      F = [0.3,0.4,0.5,0.6][randomInt(0,3)],          // frequence - 0.3
   
       yCirc = d3.scaleLinear().domain([-1, 1]).range([h/2 + radius, h/2 - radius]),
       xCirc = d3.scaleLinear().domain([-1, 1]).range([0, 2 * radius]),

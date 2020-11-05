@@ -5,6 +5,7 @@ import fourierDiv from "./fourier.html";
 import $ from "jquery";
 import sensors from "./sample-sensors";
 import launchPlot from "./fourier";
+import AromaTable from "./aroma-table.js";
 
 class Grid {
     constructor(items) {
@@ -69,6 +70,10 @@ class Grid {
         plot.innerHTML = "";
         mount(plot, el("div", {innerHTML: fourierDiv}));
         launchPlot(modal.querySelector("#fourier .plot"));
+
+        let aromaTable = new AromaTable(modal.querySelector(".table-container"));
+        aromaTable.draw();
+
     }
 
     filterBySensorType(type) {
